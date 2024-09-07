@@ -8,8 +8,11 @@ variable "server_port" {
     default = 8080
   }
 
+variable "instance_type" {
+    description = "The instance type to use for EC2 instances"
+    default = "t2.micro"
+}
 
-# State can be either: available, information, impaired, or unavailable
 data "aws_availability_zones" "available" {
   state = "available"
 }
@@ -17,7 +20,7 @@ data "aws_availability_zones" "available" {
 resource "aws_launch_configuration" "testlauncher" {
   name_prefix   = "terraform-lconf-"
   image_id     = "ami-0e86e20dae9224db8"
-  instance_type = "t2.micro"
+  instance_type = var.instance_type
   security_groups = [aws_security_group.testvm_sg.id]
   associate_public_ip_address = true
   key_name      = "testVM"
@@ -86,8 +89,9 @@ resource "aws_autoscaling_group" "testASG" {
 
   load_balancers   = [aws_elb.loadbal.name]
   health_check_type  = "ELB"
-  min_size             = 2
-  max_size             = 3
+  min_size          = 1
+  max_size          = 1
+  desired_capacity  = 1
 
   tag {
     key                 = "Name"
