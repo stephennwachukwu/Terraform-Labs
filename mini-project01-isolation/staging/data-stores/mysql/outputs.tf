@@ -1,8 +1,10 @@
-output "address" {
-  value = "${aws_db_instance.mysqldb.address}"
+
+output "db_instance_endpoint" {
+  description = "The connection endpoint for the database"
+  value       = aws_db_instance.mysqldb.endpoint
 }
 
-output "port" {
-  value = "${aws_db_instance.mysqldb.port}"
+output "db_instance_name" {
+  description = "The name of the database"
+  value       = aws_db_instance.mysqldb.db_name
 }
-

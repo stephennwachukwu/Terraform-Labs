@@ -15,3 +15,14 @@ variable "db_password" {
   type        = string
   sensitive   = true
 }
+
+variable "vpc_id"{}
+variable "db_private_subnet_id" {
+  type = string
+}
+
+variable "multi_az" {
+  description = "(Optional) Specifies if the RDS instance is multi-AZ"
+  type = bool
+  default = true
+}

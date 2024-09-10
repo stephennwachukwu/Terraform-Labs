@@ -17,3 +17,7 @@ output "ssh_http_security_group_id" {
 output "internet_gateway_id" {
   value = aws_internet_gateway.igw.id
 }
+
+output "data_layer_subnet_id" {
+  value = aws_subnet.db_private_subnet.*.id
+}

@@ -3,7 +3,7 @@ variable "subnet_id" {
   type        = string
 }
 
-variable "vpc_security_group_ids" {
+variable "http_ssh_sg_id" {
   description = "A list of security group IDs to associate with the instance"
   type        = list(string)
 }
@@ -25,3 +25,23 @@ variable "user_password" {
   sensitive   = true
 }
 
+variable "db_host" {
+  description = "The host of the database"
+  type        = string
+}
+
+variable "db_name" {
+  description = "The name of the database"
+  type        = string
+}
+
+variable "db_username" {
+  description = "The username for the database"
+  type        = string
+}
+
+variable "db_password" {
+  description = "The password for the database"
+  type        = string
+  sensitive   = true
+}

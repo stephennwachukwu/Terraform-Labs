@@ -25,6 +25,17 @@ resource "aws_subnet" "private_subnet" {
   }
 }
 
+resource "aws_subnet" "db_private_subnet" {
+  count = length(var.data_private_cidrs)
+  vpc_id     = aws_vpc.main-net.id
+  cidr_block = var.data_private_cidrs[count.index]
+  map_public_ip_on_launch = false
+  availability_zone = var.availability_zone[count.index]
+  tags = {
+    Name = "Private Subnet"
+  }
+}
+
 resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.main-net.id
   
@@ -85,7 +96,4 @@ resource "aws_security_group" "ssh_http_access" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-
-
-
 
