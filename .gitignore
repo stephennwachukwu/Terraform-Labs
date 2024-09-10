@@ -46,3 +46,5 @@ terraform.rc
 
 # Ignore any .DS_Store files (for Mac users)
 .DS_Store
+
+*.sh
