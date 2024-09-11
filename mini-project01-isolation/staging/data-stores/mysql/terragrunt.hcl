@@ -10,7 +10,7 @@ dependency "network" {
 
 
 inputs = {
-  db_private_subnet_id = dependency.network.outputs.data_layer_subnet_id
+  db_private_subnet_ids = dependency.network.outputs.data_layer_subnet_id
   vpc_id = dependency.network.outputs.vpc_id
 }
 

@@ -13,12 +13,10 @@ dependency "data-stores" {
 inputs = {
   subnet_id            = dependency.network.outputs.public_subnet_id
   http_ssh_sg_id       = [dependency.network.outputs.ssh_http_security_group_id]
-  db_address           = dependency.data-stores.outputs.address
-  db_port              = dependency.data-stores.outputs.port
   key_name             = "deployer-key"
 
-  db_host              = dependency.database.outputs.db_instance_endpoint
-  db_name              = dependency.database.outputs.db_instance_name
+  db_host              = dependency.data-stores.outputs.db_instance_endpoint
+  db_name              = dependency.data-stores.outputs.db_instance_name
   vpc_id               = dependency.network.outputs.vpc_id
 }
 

@@ -17,8 +17,8 @@ variable "db_password" {
 }
 
 variable "vpc_id"{}
-variable "db_private_subnet_id" {
-  type = string
+variable "db_private_subnet_ids" {
+  type = list(string)
 }
 
 variable "multi_az" {

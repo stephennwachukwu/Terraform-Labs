@@ -15,7 +15,7 @@ resource "aws_db_instance" "mysqldb" {
 
 resource "aws_db_subnet_group" "default" {
   name       = "db_layer_private_subnet_group"
-  subnet_ids = [var.db_private_subnet_id]
+  subnet_ids = var.db_private_subnet_ids
   tags = {
     Name = "My DB subnet group"
   }

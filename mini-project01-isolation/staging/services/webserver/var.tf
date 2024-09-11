@@ -33,6 +33,7 @@ variable "db_host" {
 variable "db_name" {
   description = "The name of the database"
   type        = string
+  default = "staging_db"
 }
 
 variable "db_username" {

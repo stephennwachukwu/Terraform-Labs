@@ -1,6 +1,6 @@
 output "http_ssh_sg_id" {
   description = "The ID of the webserver's security group"
-  value       = aws_security_group.http_ssh_sg_id.id
+  value       = aws_instance.web_server.vpc_security_group_ids
 }
 
 output "public_ip" {

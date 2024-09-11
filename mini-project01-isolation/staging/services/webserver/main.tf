@@ -1,8 +1,8 @@
 resource "aws_instance" "web_server" {
   ami     = "ami-0e86e20dae9224db8"
   instance_type = "t2.micro"
-  subnet_id	= var.subnet_id
-  vpc_security_group_ids = [var.http_ssh_sg_id]
+  subnet_id = var.subnet_id
+  vpc_security_group_ids = var.http_ssh_sg_id
   key_name = aws_key_pair.deployer.key_name
   
   user_data = <<-EOF
