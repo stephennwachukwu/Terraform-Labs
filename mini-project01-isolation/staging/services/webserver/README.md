@@ -33,6 +33,12 @@ environment variables:
 export AWS_ACCESS_KEY_ID=(your access key id)
 export AWS_SECRET_ACCESS_KEY=(your secret access key)
 ```
+Generate the ssh-key locally and configure the webserver credentials as environment variables:
+
+```
+export TF_VAR_ssh_public_key=(desired database username)
+export TF_VAR_user_password=(desired database password)
+```
 
 Create a `terragrunt.hcl` file in your project root directory and configure the remote state backend and input variables. Here's an example:
 
