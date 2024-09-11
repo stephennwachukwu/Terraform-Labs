@@ -56,7 +56,7 @@ resource "aws_launch_configuration" "testlauncher" {
 
   user_data = <<-EOF
               #!/bin/bash
-              echo "Hello, World" > index.html
+              echo "Hello, World <p>DB address: ${var.db_host}</p>" > index.html
               nohup busybox httpd -f -p "${var.server_port}" &
               echo "nohup busybox httpd -f -p ${var.server_port} &" >> /etc/rc.local
               chmod +x /etc/rc.local
