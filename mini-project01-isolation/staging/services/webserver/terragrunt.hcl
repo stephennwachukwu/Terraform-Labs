@@ -13,6 +13,8 @@ dependency "data-stores" {
 inputs = {
   subnet_id            = dependency.network.outputs.public_subnet_id
   http_ssh_sg_id       = [dependency.network.outputs.ssh_http_security_group_id]
+  elb_sg_id            = [dependency.network.outputs.elb_security_group_id]
+  elb_subnet_ids        = dependency.network.outputs.elb_subnet_id
   key_name             = "deployer-key"
 
   db_host              = dependency.data-stores.outputs.db_instance_endpoint

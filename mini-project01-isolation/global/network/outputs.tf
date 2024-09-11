@@ -21,3 +21,11 @@ output "internet_gateway_id" {
 output "data_layer_subnet_id" {
   value = aws_subnet.db_private_subnet.*.id
 }
+
+output "elb_security_group_id" {
+  value = aws_security_group.elb-sg.id 
+}
+
+output "elb_subnet_id" {
+  value = aws_subnet.elb_public_subnet.*.id
+}
