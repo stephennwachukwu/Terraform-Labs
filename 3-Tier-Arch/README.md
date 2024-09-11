@@ -72,16 +72,16 @@ Before we begin, make sure you have:
 
 We've created reusable modules to make your life easier! Check them out:
 
-- 🔙 [Backend](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/Backend)
-- 🚨 [Cloudwatch Alarm](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/Cloudwatch_Alarm)
-- 🔐 [KMS](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/KMS)
-- 🛡️ [WAF](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/WAF)
-- 💻 [Compute](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/Compute)
-- ⚖️ [Load Balancer](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/Load-Balancer)
-- 🌐 [Network](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/Network)
-- 🗄️ [RDS](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/RDS)
-- 🧭 [Route 53](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/Route_53)
-- 📚 [RDS Read Replica](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/RDS_read_replica)
+- 🔙 [Backend](https://github.com/stephennwachukwu/Terraform-Labs/tree/main/3-Tier-Arch/Backend)
+- 🚨 [Cloudwatch Alarm](https://github.com/stephennwachukwu/Terraform-Labs/tree/main/3-Tier-Arch/modules/Cloudwatch_Alarm)
+- 🔐 [KMS](https://github.com/stephennwachukwu/Terraform-Labs/tree/main/3-Tier-Arch/modules/KMS)
+- 🛡️ [WAF](https://github.com/stephennwachukwu/Terraform-Labs/tree/main/3-Tier-Arch/modules/WAF)
+- 💻 [Compute](https://github.com/stephennwachukwu/Terraform-Labs/tree/main/3-Tier-Arch/modules/Compute)
+- ⚖️ [Load Balancer](https://github.com/stephennwachukwu/Terraform-Labs/tree/main/3-Tier-Arch/modules/Load-Balancer)
+- 🌐 [Network](https://github.com/stephennwachukwu/Terraform-Labs/tree/main/3-Tier-Arch/modules/Network)
+- 🗄️ [RDS](https://github.com/stephennwachukwu/Terraform-Labs/tree/main/3-Tier-Arch/modules/RDS)
+- 🧭 [Route 53](https://github.com/stephennwachukwu/Terraform-Labs/tree/main/3-Tier-Arch/modules/Route_53)
+- 📚 [RDS Read Replica](https://github.com/stephennwachukwu/Terraform-Labs/tree/main/3-Tier-Arch/modules/RDS_read_replica)
 
 ## 🚀 Deployment Steps
 
@@ -89,20 +89,21 @@ We've created reusable modules to make your life easier! Check them out:
 
 1. 📥 Clone the repository:
    ```
-   $ git clone https://github.com/stephennwac/THREE-TIER-ARCHITECTURE.git
+   $ git clone https://github.com/stephennwachukwu/Terraform-Labs.git
+   $ cd ./Terraform-Labs/3-Tier-Arch
    ```
 
 2. 📝 Edit the files in the modules to suit your needs.
 
 3. 🔧 Set up remote state management:
    ```
-   $ cd path/to/THREE-TIER-ARCHITECTURE/Backend
+   $ cd ./Terraform-Labs/3-Tier-Arch/Backend
    $ terraform init
    $ terraform plan
    $ terraform apply -auto-approve
    ```
 
-4. 🏗️ Deploy the infrastructure:
+4. 🏗️ Deploy the infrastructure (Into the base of the The Repository):
    ```
    $ cd ..
    $ terraform init
